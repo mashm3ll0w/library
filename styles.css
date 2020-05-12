@@ -25,6 +25,48 @@ h1  {
   font-size: 1rem;
 }
 
+/* Form - Modal */
+fieldset {
+  width: 400px;
+  margin: 0.5rem auto;
+  border-radius: 10px;
+}
+
+.data-input {
+  display: block;
+  border-style: none;
+  width: 20rem;
+  height: 1.5rem;
+  border: #ff1654 solid 1px;
+  border-radius: 3px;
+  padding-left: 0.75rem;
+  margin: 0.75rem auto;
+}
+
+.radio {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio-label{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.addToLib {
+  display: block;
+  margin: 10px auto;
+  width: 7.5rem;
+  height: 2rem;
+  background-color: #ff1654;
+  color: #f3ffbd;
+  border-radius: 3px;
+}
+
+/* The Library */
+
 .library {
   display: flex;
   flex-direction: row;
