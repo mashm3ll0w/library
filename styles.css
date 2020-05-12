@@ -5,7 +5,7 @@ body {
   font-family: 'Ubuntu', sans-serif;
   font-weight: normal;
   overflow: hidden;
-  padding: 50px;
+  padding: 30px;
   text-align: center;
 }
 
@@ -16,7 +16,7 @@ h1  {
   margin: 3rem auto 1.5rem;
 }
 
-button {
+.addBtn {
   height: 2.5rem;
   width: 10rem;
   border-radius: 3px;
@@ -25,20 +25,54 @@ button {
   font-size: 1rem;
 }
 
-.red, .green, .blue {
-  height: 100px;
-  width: 400px;
-  border: #ff1654 solid 3px;
-  border-radius: 5px;
-  margin: 10px;
-}
-
 .library {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin: 1.25rem auto;
+}
+
+.book{
+  height: 100px;
+  width: 300px;
+  max-width: 90%px;
+  max-height: 90%;
+  border: #ff1654 solid 3px;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 5px 10px;
+}
+
+.book-title{
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin: 10px 5px;
+}
+
+.book-author{
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 5px;
+}
+
+.read {
+  background-color: #f3ffbd;
+  color: #000;
+}
+
+footer{
+  margin-top: 2rem;
+}
+.logo {
+	color: #000;
+	margin: 10px 5px 5px;
+}
+
+.logo:hover {
+	color: #ff1654;
 }
 
 
