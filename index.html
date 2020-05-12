@@ -9,7 +9,31 @@
 	</head>
 	<body>
 		<h1 class="heading">Library</h1>
-		<button class="addBtn">Add Book</button>
+		<button class="addBtn">Add Books</button>
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+			<!-- Modal content -->
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<fieldset>
+					<legend>Enter book details</legend>
+					<form action="">
+						<input class="data-input" type="text" name="title" id="title" placeholder="Book Title..." autocomplete="off" />
+						<input class="data-input" type="text" name="author" id="author" placeholder="Author's name..." />
+						<input class="data-input" type="number" name="pages" id="pages" placeholder="Number of Pages..." />
+						<div class="radio">
+							<p>Have you read this book?</p>
+							<input type="radio" name="check" id="check" value="check-yes" />
+							<label class="radio-label" for="check-yes">Yes</label>
+							<input type="radio" name="check" id="check" value="check-no" />
+							<label class="radio-label" for="check-no">No</label>
+						</div>
+						<button type="submit" class="addToLib">Send to Library</button>
+					</form>
+				</fieldset>
+			</div>
+		</div>
+		<!-- The library -->
 		<div class="library">
 			<div class="book">
 				<p class="book-title">never go back</p>
@@ -19,6 +43,7 @@
 			</div>
 		</div>
 		<script src="index.js"></script>
+		<!-- Footer -->
 		<footer>
 			<a href="https://www.github.com/mashm3ll0w"><i class="logo fa fa-github fa-3x"></i></a>
 			<a href="https://www.linkedin.com/in/charles-swaleh"><i class="logo fa fa-linkedin fa-3x"></i></a>
