@@ -26,8 +26,55 @@ h1  {
 }
 
 /* Form - Modal */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  margin: 10% auto; /* 15% from the top and centered */
+  padding: 10px;
+  width: 30%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  display: block;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fieldset-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 325px;
+  background-color: #f3ffbd;
+  margin: 0.5rem auto;
+  border-radius: 10px;
+}
+
 fieldset {
-  width: 400px;
+  width: 225px;
   margin: 0.5rem auto;
   border-radius: 10px;
 }
@@ -35,19 +82,12 @@ fieldset {
 .data-input {
   display: block;
   border-style: none;
-  width: 20rem;
+  width: 12.5rem;
   height: 1.5rem;
   border: #ff1654 solid 1px;
   border-radius: 3px;
   padding-left: 0.75rem;
   margin: 0.75rem auto;
-}
-
-.radio {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 
 .radio-label{
