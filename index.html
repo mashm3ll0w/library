@@ -15,22 +15,24 @@
 			<!-- Modal content -->
 			<div class="modal-content">
 				<span class="close">&times;</span>
-				<fieldset>
-					<legend>Enter book details</legend>
-					<form action="">
-						<input class="data-input" type="text" name="title" id="title" placeholder="Book Title..." autocomplete="off" />
-						<input class="data-input" type="text" name="author" id="author" placeholder="Author's name..." />
-						<input class="data-input" type="number" name="pages" id="pages" placeholder="Number of Pages..." />
-						<div class="radio">
-							<p>Have you read this book?</p>
-							<input type="radio" name="check" id="check" value="check-yes" />
-							<label class="radio-label" for="check-yes">Yes</label>
-							<input type="radio" name="check" id="check" value="check-no" />
-							<label class="radio-label" for="check-no">No</label>
-						</div>
-						<button type="submit" class="addToLib">Send to Library</button>
-					</form>
-				</fieldset>
+				<div class="fieldset-container">
+					<fieldset>
+						<legend>Enter book details</legend>
+						<form action="">
+							<input class="data-input" type="text" name="title" id="title" placeholder="Book Title..." autocomplete="off" />
+							<input class="data-input" type="text" name="author" id="author" placeholder="Author's name..." />
+							<input class="data-input" type="number" name="pages" id="pages" placeholder="Number of Pages..." />
+							<div class="radio">
+								<p>Have you read this book?</p>
+								<input type="radio" name="check" id="check" value="check-yes" />
+								<label class="radio-label" for="check-yes">Yes</label>
+								<input type="radio" name="check" id="check" value="check-no" />
+								<label class="radio-label" for="check-no">No</label>
+							</div>
+							<button type="submit" class="addToLib">Send to Library</button>
+						</form>
+					</fieldset>
+				</div>
 			</div>
 		</div>
 		<!-- The library -->
