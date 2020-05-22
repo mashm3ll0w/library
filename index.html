@@ -19,14 +19,14 @@
 					<fieldset>
 						<legend>Enter book details</legend>
 						<form action="">
-							<input class="data-input" type="text" name="title" id="title" placeholder="Book Title..." autocomplete="off" />
-							<input class="data-input" type="text" name="author" id="author" placeholder="Author's name..." />
-							<input class="data-input" type="number" name="pages" id="pages" placeholder="Number of Pages..." />
+							<input class="data-input" type="text" name="title" id="title" placeholder="Book Title..." autocomplete="off" required/>
+							<input class="data-input" type="text" name="author" id="author" placeholder="Author's name..." required/>
+							<input class="data-input" type="number" name="pages" id="pages" placeholder="Number of Pages..." required/>
 							<div class="radio">
 								<p>Have you read this book?</p>
-								<input type="radio" name="check" id="check" value="check-yes" checked/>
+								<input type="radio" name="check" id="check" value="yes" checked/>
 								<label class="radio-label" for="check-yes">Yes</label>
-								<input type="radio" name="check" id="check" value="check-no" />
+								<input type="radio" name="check" id="check" value="no" />
 								<label class="radio-label" for="check-no">No</label>
 							</div>
 							<button type="submit" class="addToLib">Send to Library</button>
