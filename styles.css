@@ -140,6 +140,10 @@ fieldset {
   margin: 5px;
 }
 
+.readBtn, .remove-book{
+  margin: 2px;
+}
+
 .read {
   background-color: #f3ffbd;
   color: #000;
