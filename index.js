@@ -23,12 +23,33 @@ window.addEventListener("click", (e) => {
 
 //  Library
 // Global Variables
-let myLibrary = [];
+let myLibrary = [
+	{
+		title: "killing floor",
+		author: "lee child",
+		pages: 473,
+		haveRead: "no",
+	},
+	{
+		title: "stealing worlds",
+		author: "karl schroeder",
+		pages: 430,
+		haveRead: "yes",
+	},
+	{
+		title: "the wandering earth",
+		author: "cixin liu",
+		pages: 781,
+		haveRead: "no",
+	},
+];
+
 let titleField = document.getElementById("title");
 let authorField = document.getElementById("author");
 let numOfPages = document.getElementById("pages");
 let newBookBtn = document.querySelector(".addToLib");
 
+// constructor function
 function Book(title, author, pages, read) {
 	this.title = title;
 	this.author = author;
@@ -40,20 +61,19 @@ function Book(title, author, pages, read) {
 	};
 }
 
-function addBookToLibrary() {
-	// Get the title, author, pages and read status
-	let bookTitle = titleField.value;
-	let bookAuthor = authorField.value;
-	let bookPages = numOfPages.value;
-	console.log(bookTitle, bookAuthor, bookPages);
-}
-
+// capture the new books the user enters
 newBookBtn.addEventListener("click", () => {
 	event.preventDefault();
-	let bookTitle = titleField.value;
-	let bookAuthor = authorField.value;
-	let bookPages = numOfPages.value;
-	let readStatus = document.querySelector("input[type=radio]:checked").value;
-	console.log(bookTitle, bookAuthor, bookPages, readStatus);
+	let newBook = {
+		title: titleField.value,
+		author: authorField.value,
+		pages: parseInt(numOfPages.value),
+		haveRead: document.querySelector("input[type=radio]:checked").value,
+	};
+	myLibrary.push(newBook);
+	console.table(myLibrary);
 	modal.style.display = "none";
 });
+
+// show the book in the library
+function addBookToLibrary() {}
