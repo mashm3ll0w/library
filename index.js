@@ -21,8 +21,7 @@ window.addEventListener("click", (e) => {
 	}
 });
 
-//  Library
-// Global Variables
+//  Default Library
 let myLibrary = [
 	{
 		title: "killing floor",
@@ -42,12 +41,50 @@ let myLibrary = [
 		pages: 781,
 		haveRead: "no",
 	},
+	{
+		title: "this mortal coil",
+		author: "emily suvada",
+		pages: 586,
+		haveRead: "yes",
+	},
 ];
 
+// global variables
+let newBookBtn = document.querySelector(".addToLib");
 let titleField = document.getElementById("title");
 let authorField = document.getElementById("author");
 let numOfPages = document.getElementById("pages");
-let newBookBtn = document.querySelector(".addToLib");
+let libraryContainer = document.querySelector(".library");
+
+// add default books on page load
+let myBook = myLibrary.map(function (book) {
+	
+	// individual book container
+	let bookContainer = document.createElement("div");
+	bookContainer.classList.add("book");
+	// title
+	let bookTitle = document.createElement("p");
+	bookTitle.classList.add("book-title");
+	bookTitle.innerHTML = book.title;
+	// author + pages
+	let bookAuthor = document.createElement("p");
+	bookAuthor.classList.add("book-author");
+	bookAuthor.innerHTML = `${book.author} - ${book.pages} pages`;
+	//read and delete buttons
+	let read = document.createElement("button");
+	read.classList.add("readBtn");
+	read.innerHTML = "Read";
+	let deleteBtn = document.createElement("button");
+	deleteBtn.classList.add("remove-book");
+	deleteBtn.innerHTML = "Delete";
+
+	//append to library
+	bookContainer.appendChild(bookTitle);
+	bookContainer.appendChild(bookAuthor);
+	bookContainer.appendChild(read);
+	bookContainer.appendChild(deleteBtn);
+	libraryContainer.appendChild(bookContainer);
+});
 
 // constructor function
 function Book(title, author, pages, read) {
@@ -73,7 +110,35 @@ newBookBtn.addEventListener("click", () => {
 	myLibrary.push(newBook);
 	console.table(myLibrary);
 	modal.style.display = "none";
+	addBookToLibrary();
 });
 
 // show the book in the library
-function addBookToLibrary() {}
+function addBookToLibrary() {
+	// individual book container
+	let bookContainer = document.createElement("div");
+	bookContainer.classList.add("book");
+	// title
+	let bookTitle = document.createElement("p");
+	bookTitle.classList.add("book-title");
+	bookTitle.innerHTML = titleField.value;
+	// author + pages
+	let bookAuthor = document.createElement("p");
+	bookAuthor.classList.add("book-author");
+	bookAuthor.innerHTML = `${authorField.value} - ${numOfPages.value} pages`;
+
+	//read and delete buttons
+	let read = document.createElement("button");
+	read.classList.add("readBtn");
+	read.innerHTML = "Read";
+	let deleteBtn = document.createElement("button");
+	deleteBtn.classList.add("remove-book");
+	deleteBtn.innerHTML = "Delete";
+
+	//append to library
+	bookContainer.appendChild(bookTitle);
+	bookContainer.appendChild(bookAuthor);
+	bookContainer.appendChild(read);
+	bookContainer.appendChild(deleteBtn);
+	libraryContainer.appendChild(bookContainer);
+}
