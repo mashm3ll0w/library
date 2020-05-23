@@ -166,3 +166,18 @@ function updateReadBtns() {
 defaultBooks();
 toggleRead();
 
+// delete function
+function deleteBook() {
+	deleteBtn = document.querySelectorAll(".remove-book");
+	let parent = document.querySelector(".library");
+	let child = document.querySelectorAll(".book");
+	for (let a = 0; a < deleteBtn.length; a++) {
+		deleteBtn[a].addEventListener("click", function () {
+			myLibrary.splice(a, 1);
+			console.log(a);
+			console.table(myLibrary);
+			parent.removeChild(child[a]);
+		});
+	}
+}
+deleteBook();
