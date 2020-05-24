@@ -67,10 +67,11 @@ addBookToLibBtn.addEventListener("click", () => {
 	updateReadBtns();
 	let newBook = JSON.stringify(new Book(titleField.value, authorField.value, numOfPages.value, document.querySelector("input[type=radio]:checked").value));
 	myLibrary.push(JSON.parse(newBook));
-	console.table(myLibrary);
+	//console.table(myLibrary);
 	modal.style.display = "none";
 	addBookToLibrary();
 	toggleRead();
+	deleteBook();
 });
 
 // Show in Library
@@ -174,8 +175,6 @@ function deleteBook() {
 	for (let a = 0; a < deleteBtn.length; a++) {
 		deleteBtn[a].addEventListener("click", function () {
 			myLibrary.splice(a, 1);
-			console.log(a);
-			console.table(myLibrary);
 			parent.removeChild(child[a]);
 		});
 	}
